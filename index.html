@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postman Knowledge Graph</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Postman Workspace Knowledge Graph</h1>
+            <p>Real-time visualization of Postman workspaces, collections, and requests</p>
+        </header>
+
+        <div class="controls">
+            <div class="api-key-section">
+                <label for="api-key">Postman API Key:</label>
+                <input type="password" id="api-key" placeholder="Enter your Postman API Key">
+                <button id="load-data">Load Data</button>
+            </div>
+            <div class="status" id="status">Ready to load data...</div>
+        </div>
+
+        <div class="graph-container">
+            <div id="knowledge-graph"></div>
+        </div>
+
+        <div class="data-panel">
+            <h3>Linked Data (JSON-LD)</h3>
+            <pre id="json-ld-output"></pre>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
